@@ -11,6 +11,7 @@ def load_philosophies(filepath="philosophies_config.txt"):
     for section in config.sections():
         phil_id = config.get(section, 'id', fallback=section)
         philosophies[phil_id] = {
+            'id': phil_id,
             'name': config.get(section, 'name', fallback=phil_id),
             'topology': config.get(section, 'topology', fallback=''),
             'block_pattern': config.get(section, 'block_pattern', fallback=''),
