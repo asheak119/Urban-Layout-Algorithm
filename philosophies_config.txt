@@ -1,0 +1,189 @@
+[PHILOSOPHY_01]
+id = hippodamian_grid
+name = Classical Hippodamian Grid
+topology = Orthogonal rectilinear grid aligned to fixed cardinal or diagonal axes.
+block_pattern = Elongated rectangles (approx. 2:1 to 3:1 ratio).
+anchors = Central Agora (occupying 1-2 full blocks); Acropolis placed on adjacent high ground if present.
+density = Medium density; uniform street-wall setbacks.
+slope_tolerance = Moderate
+terrain_behavior = Flat/gentle terrain runs unhindered. Moderate cross-slopes convert transverse streets to stepped pedestrian paths. Fails if unbuildable block ratio exceeds slope slider limit. Cliffs truncate grid abruptly without curving. Water terminates in right-angle quays.
+
+[PHILOSOPHY_02]
+id = roman_castrum
+name = Ancient Roman Castrum
+topology = Rectangular walled perimeter centered on two primary cross-axes (Cardo Maximus N-S, Decumanus Maximus E-W). Secondary orthogonal infill per quadrant.
+block_pattern = Small to moderate square insulae.
+anchors = Forum at central intersection of Cardo and Decumanus; fortified gates at the 4 axis terminuses.
+density = High density; continuous perimeter walls and row structures.
+slope_tolerance = Gentle to Moderate
+terrain_behavior = Requires heavy cut-and-fill to maintain rigid axes. Invalidates if primary cross-axes exceed slope tolerance. Natural cliffs replace defensive perimeter walls; interior cliffs cause generation failure.
+
+[PHILOSOPHY_03]
+id = laws_of_the_indies
+name = Laws of the Indies (Spanish Colonial)
+topology = Orthogonal grid radiating outward from an expansive central plaza. 4 midpoint streets and 8 corner streets extend outward to disperse prevailing winds.
+block_pattern = Uniform square or slightly rectangular blocks.
+anchors = Plaza Mayor at center; main Cathedral on east edge; Cabildo/administrative palace on opposing edges.
+density = Medium-high density; courtyard buildings sharing party walls with zero front setback.
+slope_tolerance = Moderate
+terrain_behavior = Plaza Mayor requires level ground (invalidates if plaza elevation variance exceeds 15% of slope threshold). Outer blocks absorb slope via stepped foundations. Streets truncate cleanly at cliff edges without curving. Port layouts anchor the plaza 1 block inland from the shoreline.
+
+[PHILOSOPHY_04]
+id = star_fort
+name = Star Fort / Ideal Renaissance (Trace Italienne)
+topology = Concentric polygonal rings intersecting radial avenues projecting from the center to bastion points.
+block_pattern = Trapezoidal blocks narrowing toward the center.
+anchors = Central polygonal Piazza d'Armi; military barracks/arsenals distributed along defensive perimeter bastions.
+density = Uniform height and continuous facades; surrounded by a wide, unbuilt exterior glacis.
+slope_tolerance = Gentle
+terrain_behavior = Extreme sensitivity. Invalidates if line-of-sight from center to perimeter bastions is obstructed or if elevation variance across the defensive perimeter exceeds 30% of the slope threshold. Tolerates water as moat perimeters.
+
+[PHILOSOPHY_05]
+id = baroque_axial
+name = Baroque Axial / Grand Vista
+topology = Diagonal tri-radial avenues (trivium) and star-burst axes slicing through the terrain toward monumental focal points; secondary infill fills triangular wedges.
+block_pattern = Large, irregular triangular and trapezoidal wedge blocks.
+anchors = Sovereign palace, monument, or cathedral at central convergence points; obelisks/monuments at terminal vistas.
+density = Monumental civic structures along avenues; residential perimeter blocks behind unified facades.
+slope_tolerance = Moderate
+terrain_behavior = Avenues maintain straight sightlines via massive grading and terraced ramps. Moderate-to-steep slopes introduce grand staircases. Cliffs invalidate axes if they cannot be bridged. Water integrated via formal canals, stone embankments, and axial bridges.
+
+[PHILOSOPHY_06]
+id = penn_grid
+name = Quaker Enlightenment Grid (Penn Plan)
+topology = Uniform rectangular grid bounded between two natural geographic boundaries (e.g., rivers); bisected by two wide primary axes.
+block_pattern = Large square or rectangular blocks subdivided by narrow interior alleys.
+anchors = Center Square at the primary intersection (City Hall); 4 symmetrically placed public garden squares in quadrants.
+density = Detached and semi-detached residential/commercial parcels with generous yard allocations.
+slope_tolerance = Moderate
+terrain_behavior = Grid continues across rolling terrain; slopes absorbed via stepped basement cuts. Generation fails if the two main bisecting axes cannot cross the terrain within the slope threshold. Bridges cross bounding water bodies perpendicularly.
+
+[PHILOSOPHY_07]
+id = savannah_ward
+name = Cellular Ward System (Savannah Plan)
+topology = Modular, repeating civic cells (wards). Each ward consists of a central square flanked by 4 civic trust lots (E/W) and 40 residential tything lots (N/S).
+block_pattern = Repeating cellular units bounded by peripheral avenues.
+anchors = Central green square in every ward; schools, churches, and public halls on flanking trust lots.
+density = Balanced medium density; residential rowhouses surrounding communal green space.
+slope_tolerance = Gentle
+terrain_behavior = Highly sensitive to elevation changes. Individual wards fail to spawn if internal elevation exceeds gentle thresholds. Fails entirely if fewer than 4 contiguous wards can be placed. Designed to anchor along elevated river bluffs or coastlines.
+
+[PHILOSOPHY_08]
+id = commissioners_grid
+name = Speculative Utilitarian Grid (1811 Plan)
+topology = High-density orthogonal grid: wide, broadly spaced longitudinal avenues intersected by closely spaced transverse cross-streets.
+block_pattern = Long, narrow rectangular blocks (approx. 4:1 to 5:1 ratio).
+anchors = Commercial activity distributed continuously along avenues; cross-streets reserved for residential infill. Minimal civic plazas.
+density = Maximum floor area ratio; zero front/side setbacks.
+slope_tolerance = Steep
+terrain_behavior = Imposes grid through heavy civil grading. Depressions are filled and hills leveled. Steep slopes between avenues are resolved via retaining walls or extreme street grades up to the slider limit. Cliffs cause abrupt dead ends or elevation severing. Terminus at water features finger piers and docks.
+
+[PHILOSOPHY_09]
+id = jeffersonian_macro
+name = Section-Line Macro Grid (PLSS)
+topology = Macro-arterial grid spaced on uniform, large intervals (mile/half-mile scale). Interiors are populated independently with secondary local grids, strips, or clusters.
+block_pattern = Massive macro-blocks containing inward-facing sub-developments.
+anchors = Commercial nodes, high schools, and retail centers placed at four-way macro intersections.
+density = Low-to-moderate; low-density residential interior, auto-oriented commercial along perimeter.
+slope_tolerance = Steep
+terrain_behavior = Macro arterials run continuously; if a slope threshold is exceeded, the arterial deviates locally and snaps back to the section line once clear. Cliffs trigger switchbacks or terminus. Long-span bridges cross water at section lines.
+
+[PHILOSOPHY_10]
+id = haussmann_boulevard
+name = Haussmannian Boulevard Arterial
+topology = Network of wide, straight diagonal boulevards linking multi-way star intersections (places), cutting through older irregular infill blocks.
+block_pattern = Highly irregular wedge-shaped blocks with chamfered street corners.
+anchors = Civic monuments, train terminals, and opera houses terminating major boulevard sightlines.
+density = High density; uniform cornices and continuous limestone facade planes with internal light courtyards.
+slope_tolerance = Moderate
+terrain_behavior = Boulevards maintain uniform street profiles via moderate grading. Slopes exceeding the threshold are bypassed with sweeping curved alignments. Cliffs feature monumental retaining walls and grand public stairs. Riverbanks are lined with stone embankments and quays.
+
+[PHILOSOPHY_11]
+id = cerda_superblock
+name = Cerdà Chamfered Superblock (Eixample)
+topology = Uniform square grid with 45-degree chamfered block corners, creating an octagonal plaza at every intersection. Long diagonal avenues slice through at 45 degrees.
+block_pattern = Large square blocks with beveled corners and interior courtyard voids.
+anchors = Neighborhood markets, local parks, and hospitals distributed at repeating superblock intervals.
+density = Medium-high density; perimeter buildings surrounding inner courtyards.
+slope_tolerance = Gentle to Moderate
+terrain_behavior = Geometry requires uniform block profiles. Generation fails if more than 20% of the buildable area exceeds the steep threshold. Grid terminates cleanly at cliff lines without deforming. Aligns parallel to coastal edges with an open promenade.
+
+[PHILOSOPHY_12]
+id = organic_medieval
+name = Organic Medieval / Topographic Hilltown
+topology = Non-orthogonal, web-like road graph. Primary ridge-line spine connects the base to the summit. Secondary streets follow elevation contours; tertiary alleys run perpendicular.
+block_pattern = Highly irregular, dense polygonal blocks with 3-way T/Y intersections.
+anchors = Fortified citadel or castle at the highest elevation point; cathedral and marketplace in central widening.
+density = High density; zero setback, organic shapes fitted to the natural rock surface.
+slope_tolerance = Steep
+terrain_behavior = Actively conforms to complex topography. Transverse routes automatically convert to staircases or ramps when the slope threshold is exceeded. Cliffs serve as natural city walls, with structures built directly along precipices. River bends serve as defensive moats.
+
+[PHILOSOPHY_13]
+id = terraced_contour
+name = Terraced Contour / Hillside Urbanism
+topology = Horizontal parallel roads tracing contour lines (iso-elevation paths), linked vertically by switchback ramps, stairs, funiculars, or elevators.
+block_pattern = Long, thin horizontal ribbons terraced into the slope face.
+anchors = Artificial platforms carved from hillsides, or transit stations at upper/lower terminus points.
+density = Staggered building volumes where rooftops double as terraces for upper levels.
+slope_tolerance = Extreme
+terrain_behavior = Requires uneven/mountainous terrain (ineffective on flat ground). Roads maintain near-zero grades by hugging contours. When cliff thresholds are hit, roads turn into half-tunnels or anchor via pilings/retaining walls. Coastal variants terminate at sea-level harbors.
+
+[PHILOSOPHY_14]
+id = garden_city
+name = Garden City Satellite and Greenbelt
+topology = Concentric ring avenues intersected by radial boulevards extending from a central circular park. Encapsulated by a perpetual agricultural/forested greenbelt.
+block_pattern = Curved, sweeping residential arcs.
+anchors = Central civic park containing administrative/cultural institutions; peripheral commercial arcade ring; outer industrial ring connected to regional rail.
+density = Low density; detached and semi-detached cottages with deep front and rear gardens.
+slope_tolerance = Moderate
+terrain_behavior = Radial avenues curve to maintain low grades; rings trace natural contours. Fails if the central core area cannot accommodate the circular park within gentle slope limits. Cliffs and steep slopes are preserved unbuilt within the greenbelt.
+
+[PHILOSOPHY_15]
+id = linear_spine
+name = Linear Infrastructure Spine
+topology = Continuous parallel infrastructure corridor (transit, highways, trunk utilities) with transverse perpendicular access streets branching outward into natural buffers.
+block_pattern = Elongated rectangular strips segregated into parallel functional bands (e.g., residential, green, industrial).
+anchors = Mass transit passenger stations placed at fixed linear intervals along the central spine.
+density = High-density residential slabs along the living zone; large-footprint industrial complexes along the manufacturing zone.
+slope_tolerance = Gentle to Moderate
+terrain_behavior = Requires a continuous linear valley or flat corridor. Moderate transverse slopes require cut-and-fill grading. Fails if a topographic barrier blocks forward spine projection and cannot be tunneled within slope limits. Parallels watercourses and coasts.
+
+[PHILOSOPHY_16]
+id = modernist_superblock
+name = Modernist Superblock / Tower-in-the-Park
+topology = Macro-grid of grade-separated expressways bounding massive superblocks (400-800m). Internal areas contain pedestrian paths without through-traffic.
+block_pattern = Massive, unparcelized superblocks set in continuous green space.
+anchors = Multi-modal central transit terminal integrating regional rail, bus routes, and expressways beneath a core commercial zone.
+density = Low ground coverage (<15%); high vertical density (towers, slab blocks) elevated on pilotis.
+slope_tolerance = Moderate
+terrain_behavior = Ground terrain flows under buildings raised on pilotis without major regrading. Expressways require low grades; deep cuts, looping flyovers, or cloverleafs are enforced. Fails if highway grades exceed slope thresholds. Crossed with long concrete viaducts.
+
+[PHILOSOPHY_17]
+id = dendritic_suburban
+name = Dendritic Suburban Sprawl
+topology = Hierarchical tree-like graph with no internal loops. Arterials connect to collectors; collectors branch into residential streets; streets terminate in cul-de-sacs.
+block_pattern = Large, irregular curved pods with deep perimeter setbacks.
+anchors = Strip malls and big-box centers at outer arterial intersections; schools centered within residential pods.
+density = Low density; detached single-family houses with expansive front/rear private yards.
+slope_tolerance = Moderate to Steep
+terrain_behavior = Roads wind along natural drainage paths and valley contours to avoid earthworks. Cul-de-sacs terminate along ridge lines or just short of cliff drops. Retention ponds and wetlands are left as central features within golf courses or green easements.
+
+[PHILOSOPHY_18]
+id = tod_radial
+name = Transit-Oriented Radial Development (TOD)
+topology = Concentric, fine-grained walkable street grid centered within a 400m to 800m radius of a central rail transit hub. High intersection density and dedicated pedestrian paths.
+block_pattern = Small, walkable blocks (60-100m).
+anchors = Mass transit station (light rail or heavy rail) in the central plaza.
+density = Highest density (mixed-use commercial/residential) within 400m of station; tapers to townhouses and detached residential at outer edge.
+slope_tolerance = Moderate
+terrain_behavior = Optimal on gentle slopes to maintain walkability. Moderate slopes use switchback pedestrian ramps or public stairs/elevators. Invalidation occurs if a cliff or barrier severs more than 40% of the 800m walking radius. Waterfronts incorporate ferry terminals.
+
+[PHILOSOPHY_19]
+id = romantic_pastoral
+name = Romantic / Pastoral Landscape Suburb
+topology = Curvilinear street network free of 90-degree corners or rigid lines. Roads follow natural contours and drainage swales; irregular island reserves at 3-way junctions.
+block_pattern = Large, non-geometric parcels following natural terrain boundaries.
+anchors = Geographic landmarks: central lakes, communal greens, or preserved woodland groves.
+density = Low density; custom homes with wide setbacks embedded into natural landscaping.
+slope_tolerance = Moderate to Steep
+terrain_behavior = Roads strictly follow terrain contours with broad curves to eliminate earthmoving. Steep slopes introduce sweeping switchbacks. Cliffs and steep ravines are reserved as public scenic overlooks. Waterways are left natural and serve as central visual corridors.

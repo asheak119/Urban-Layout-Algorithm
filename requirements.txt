@@ -1,0 +1,11 @@
+streamlit
+numpy
+scipy
+networkx
+shapely
+Pillow
+matplotlib
+opencv-python
+scikit-image
+plotly
+kaleido
