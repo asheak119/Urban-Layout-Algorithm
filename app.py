@@ -75,9 +75,11 @@ if uploaded_file is not None:
                     ax_out.imshow(height_map, cmap='terrain', alpha=0.5)
 
                     # Draw Buildings
-                    for poly in results['buildings']:
+                    for bldg in results['buildings']:
+                        poly = bldg['polygon']
+                        color = bldg.get('color', 'brown')
                         x, y = poly.exterior.xy
-                        ax_out.fill(x, y, alpha=0.5, fc='brown', ec='black')
+                        ax_out.fill(x, y, alpha=0.7, fc=color, ec='black', linewidth=0.5)
 
                     # Draw Road Network
                     G = results['full_network']

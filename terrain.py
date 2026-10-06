@@ -72,6 +72,41 @@ class TerrainAnalyzer:
 
         return self.cost_field
 
+    def check_line_cost(self, p1, p2):
+        """
+        Calculates the maximum cost along a straight line between p1(y1, x1) and p2(y2, x2).
+        Returns the max cost. If it exceeds 100, the path is generally impassable.
+        """
+        if self.cost_field is None:
+            return 1000.0
+
+        y1, x1 = p1
+        y2, x2 = p2
+
+        # Number of points to sample
+        dist = np.hypot(y2 - y1, x2 - x1)
+        if dist == 0:
+            return self.cost_field[int(y1), int(x1)]
+
+        num_points = int(np.ceil(dist))
+
+        y_pts = np.linspace(y1, y2, num_points)
+        x_pts = np.linspace(x1, x2, num_points)
+
+        max_cost = 0.0
+        h, w = self.cost_field.shape
+
+        for y, x in zip(y_pts, x_pts):
+            iy, ix = int(np.round(y)), int(np.round(x))
+            if 0 <= iy < h and 0 <= ix < w:
+                cost = self.cost_field[iy, ix]
+                if cost > max_cost:
+                    max_cost = cost
+            else:
+                return 1000.0 # Out of bounds
+
+        return max_cost
+
     def get_geological_zones(self):
         """Map distinct geological zones"""
         if self.gradient_magnitude is None:

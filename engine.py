@@ -51,7 +51,7 @@ class CityGenerator:
 
         # PHASE 4: SECONDARY AND LOCAL INFILL
         print("Phase 4: Secondary and Local Infill...")
-        self.full_network = subdivide_secondary(self.primary_network, self.philosophy, bounds)
+        self.full_network = subdivide_secondary(self.primary_network, self.philosophy, bounds, cost_field)
 
         # PHASE 5: BLOCK AND PARCEL SUBDIVISION
         print("Phase 5: Block and Parcel Subdivision...")
